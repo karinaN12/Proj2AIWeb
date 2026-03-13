@@ -1,7 +1,7 @@
 import google.generativeai as genai
 
 # Put your Gemini API key here
-GEMINI_API_KEY = "AIzaSyCzJUyVAQkxYkc-z_WcqK-6tXy7NzBV4V0"
+GEMINI_API_KEY = ""
 
 def print_header():
     print("=" * 60)
