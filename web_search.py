@@ -1,7 +1,7 @@
 import requests
 
-API_KEY = "AIzaSyCzJUyVAQkxYkc-z_WcqK-6tXy7NzBV4V0"
-SEARCH_ENGINE_ID = "a66bf15d1597d421d"
+API_KEY = ""
+SEARCH_ENGINE_ID = ""
 SEARCH_URL = "https://www.googleapis.com/customsearch/v1"
 
 
