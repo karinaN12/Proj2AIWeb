@@ -1,33 +1,32 @@
 import os
 from google import genai
 
-MODEL_NAME = "gemini-3-flash-preview"
-
+API_KEY = "AIzaSyCzJUyVAQkxYkc-z_WcqK-6tXy7NzBV4V0"
 
 def main():
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        print("Error: GEMINI_API_KEY is not set.")
+    if not API_KEY:
+        print("Error: API key missing.")
         return
 
-    client = genai.Client(api_key=api_key)
+    client = genai.Client(api_key=API_KEY)
 
-    user_question = input("Ask a question: ").strip()
-    if not user_question:
+    question = input("Ask a question: ").strip()
+
+    if not question:
         print("No question entered.")
         return
 
     try:
         response = client.models.generate_content(
             model=MODEL_NAME,
-            contents=user_question,
+            contents=question
         )
 
         print("\nLLM Response:")
         print(response.text)
 
     except Exception as e:
-        print(f"Error calling Gemini API: {e}")
+        print("Error calling Gemini API:", e)
 
 
 if __name__ == "__main__":
