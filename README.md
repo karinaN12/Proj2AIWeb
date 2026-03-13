@@ -1,25 +1,30 @@
 # Smart Research Bot
 
-This project is a simple AI-powered research bot built with Python and the Gemini API.
+This project is part of the AI Web Explorer assignment.
+
+## Description
+
+The Smart Research Bot is a Python command-line application that uses the Gemini API to answer user questions. The bot accepts a user query, sends it to the Gemini large language model, and returns a concise response. Gemini's built-in search capability allows the bot to retrieve up-to-date information when needed.
 
 ## Features
 
-- Takes a user question from the command line
-- Uses Gemini to generate a direct answer
-- Supports Gemini built-in search functionality for research-style questions
-- Displays results in a clean, user-friendly format
-- Allows multiple questions in one session
-
-## Files
-
-- `ai_brain.py` - basic Gemini question-answer script
-- `web_search.py` - web search script for search queries
-- `research_bot.py` - improved smart research bot with formatted interface
-- `requirements.txt` - required Python packages
+- Accepts user questions through the command line
+- Uses Gemini API to generate answers
+- Supports research-style questions
+- Displays formatted responses in the console
 
 ## Requirements
 
-Install the required package:
+Install dependencies:
 
-```bash
 pip install -r requirements.txt
+
+## Run the bot
+
+python research_bot.py
+
+## Example
+
+Enter your research question: What is artificial intelligence?
+
+The bot will generate a concise answer based on the question.
