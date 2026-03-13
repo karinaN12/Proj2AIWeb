@@ -1,5 +1,4 @@
-import os
-from google import genai
+import google.generativeai as genai
 
 API_KEY = "AIzaSyCzJUyVAQkxYkc-z_WcqK-6tXy7NzBV4V0"
 
@@ -8,25 +7,23 @@ def main():
         print("Error: API key missing.")
         return
 
-    client = genai.Client(api_key=API_KEY)
+    genai.configure(api_key=API_KEY)
 
-    question = input("Ask a question: ").strip()
+    model = genai.GenerativeModel("gemini-pro")
 
-    if not question:
+    user_question = input("Ask a question: ").strip()
+    if not user_question:
         print("No question entered.")
         return
 
     try:
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=question
-        )
+        response = model.generate_content(user_question)
 
         print("\nLLM Response:")
         print(response.text)
 
     except Exception as e:
-        print("Error calling Gemini API:", e)
+        print(f"Error calling Gemini API: {e}")
 
 
 if __name__ == "__main__":
