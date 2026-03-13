@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-API_KEY = "AIzaSyCzJUyVAQkxYkc-z_WcqK-6tXy7NzBV4V0"
+API_KEY = ""
 
 def main():
     if not API_KEY:
